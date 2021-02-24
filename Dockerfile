@@ -1,4 +1,4 @@
-FROM reruin/sharelist
+FROM flxsnx/teambitionshare
 MAINTAINER FlxSNX <XXXXX@XXX>
 
 ENV PORT 8801
