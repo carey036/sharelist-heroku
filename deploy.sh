@@ -1,0 +1,1 @@
+docker run -d -p 8801:80 flxsnx/teambitionshare:latest

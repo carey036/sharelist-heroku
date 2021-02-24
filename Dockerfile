@@ -1,12 +1,11 @@
 FROM flxsnx/teambitionshare
+
 EXPOSE 8801
-FROM php:7.0-apache
 
-RUN apt-get update && \
-    apt-get clean
+RUN chmod -R 777 /teambitionshare
 
-RUN a2enmod rewrite
+ADD deploy.sh /deploy.sh
 
-COPY ./ /var/www/html/
+RUN chmod +x /deploy.sh 
 
-RUN chown -R www-data:www-data /var/www/html/
+CMD /deploy.sh
