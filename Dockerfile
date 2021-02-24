@@ -1,13 +1,10 @@
-FROM reruin/sharelist
-MAINTAINER reruin <reruin@gmail.com>
+FROM php:7.0-apache
 
-ENV PORT 33001
-EXPOSE 33001
+RUN apt-get update && \
+    apt-get clean
 
-RUN chmod -R 777 /sharelist/cache 
+RUN a2enmod rewrite
 
-ADD deploy.sh /deploy.sh
+COPY ./ /var/www/html/
 
-RUN chmod +x /deploy.sh 
-
-CMD /deploy.sh
+RUN chown -R www-data:www-data /var/www/html/
