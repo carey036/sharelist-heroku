@@ -2,12 +2,6 @@
   "name": "TeambitionShare",
   "description": "deploy TeambitionShare to Heroku",
   "keywords": ["TeambitionShare","Teambition"],
-  "env": {
-    "CONFIG": {
-       "description": "配置文件(JSON字符串 或 http远程文件)",
-       "value": ""
-     }
-  },
   "website": "https://github.com/FlxSNX/TeambitionShare",
   "repository": "https://github.com/FlxSNX/TeambitionShare",
   "stack": "container"
