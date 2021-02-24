@@ -1,10 +1,5 @@
-FROM php:7.0-apache
+FROM reruin/sharelist
+MAINTAINER FlxSNX <XXXXX@XXX>
 
-RUN apt-get update && \
-    apt-get clean
-
-RUN a2enmod rewrite
-
-COPY ./ /var/www/html/
-
-RUN chown -R www-data:www-data /var/www/html/
+ENV PORT 8801
+EXPOSE 8801
