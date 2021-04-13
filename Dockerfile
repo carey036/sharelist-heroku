@@ -1,8 +1,4 @@
-FROM docker-library/python
-
 EXPOSE 8801
-
-RUN chmod -R 777 /python
 
 ADD deploy.sh /deploy.sh
 
